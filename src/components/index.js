@@ -23,7 +23,7 @@ function Index() {
     return (
         <div className="bg-gray">
         <div className=" md:container md:mx-auto">
-            <p className="text-4xl lg:text-center lg:pt-20 font-bold text-gray-900 md:text-5xl sm:text-4xl px-3 py-3 ">
+            <p className="text-4xl lg:text-center pt-20 md:pt-36 font-bold text-gray-900 md:text-5xl sm:text-4xl px-3 py-3 ">
                 <span className="block">Healty Food Launch & Cater for Event</span>               
             </p>
             <div className="px-3 py-6 lg:text-center font-normal text-gray-700 font-semibold">

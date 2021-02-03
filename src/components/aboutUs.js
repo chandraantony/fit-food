@@ -6,7 +6,7 @@ import '../assets/css/tailwind.css'
 function AboutUs(){
     return (
         <div className=" max-w-5xl pt-10 mx-auto">
-            <div className="grid grid-rows md:grid-cols-2 gap-6 px-5 py-3 ">
+            <div className="grid grid-rows pt-10 md:grid-cols-2 gap-6 px-5 py-3 ">
                 <div className="text-4xl self-center ">
                     <span className="block">Enter the world of<span className="text-green-50 font-bold"> healthy</span></span>
                     <span className="block text-green-50 font-bold">life 
