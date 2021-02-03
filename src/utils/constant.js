@@ -1,0 +1,1 @@
+export const daharan = ` dalam bahasa jawa merupakan tatan tertinggi dalam penyebutan makanan. kami menyediakan katering sehat dan katering reguler, tapi juga bisa menjadi edukasi bersama. Sesuai dengan nama, kamu selalu mengusahakan makanan dan service terbaik untuk client kami dengan fasilitas terbaik`;

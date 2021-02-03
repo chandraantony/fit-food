@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/navbar'
+import Index from './components/index'
+import Journey from './components/journey'
+import AboutUs from './components/aboutUs'
+import Home from './components/pages/index'
+import Footer from './components/footer'
+import TodayMenu from './components/todayMenu'
+import Testimonial from './components/testimonial'
+import NotFound from './components/pages/pageNotFound';
+import FoodOrder from './components/order';
 
-function App() {
+
+const App =()=>{
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
+    <Router>
+        <Navbar />   
+            <Switch>
+              <Route exact path='/' component={Home} /> 
+              <Route exact path='/home' component={Home} /> 
+              <Route exact path='/about' component={AboutUs} /> 
+              <Route exact path='/journey' component={Journey} />
+              <Route exact path='/menu' component={TodayMenu} />
+              <Route exact path='/foodOrder' component={FoodOrder} />
+              <Route exact path='/testimonial' component={Testimonial} />   
+              <Route path="*" component={NotFound}/>           
+            </Switch>        
+      </Router>
+)};
 export default App;
+
+// // import './App.css';
+// import React from 'react'
+// import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
+// import Nav from './components/navbar'
+// import Index from './components/index'
+// import AboutUs from './components/aboutUs'
+
+// function App() {
+//   return (
+//     <div>
+//       <Nav></Nav>
+//       <Router>
+//       <Switch>
+//         <Route exact path="/"  component={Index}></Route>
+//         <Route exact path="/about"  component={AboutUs}></Route>
+//         {/* <Route exact path="/home" component={Home}></Route>
+//         <Route exact path="/login" component={Login}></Route> */}
+//         {/* <Route path="*" foo="bar"  component={() => <ErrorPage status={404} />}></Route> */}
+//       </Switch>
+//     </Router>
+//     </div>
+
+//   );
+// }
+
+// export default App;
