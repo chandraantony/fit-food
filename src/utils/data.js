@@ -1,5 +1,7 @@
 import Menu1 from '../assets/img/saladFull.png'
 import Menu2 from '../assets/img/fullPumpkin.png'
+import  Prev1 from '../assets/img/salad.png'
+import Prev2 from '../assets/img/pumpkin.png'
 
 export const comments = [
     {
@@ -31,13 +33,15 @@ export const menu = [
         name : 'Sweet Avocado Salad',
         price : 45000,
         desc: "Terasa segar di mulut berkat saus yang berasal dari minyak zaitun, air jeruk lemon, dan madu.",
-        img : Menu1
+        img : Menu1,
+        img_prev : Prev1
     },
     {
         id : '2',
         name : 'Pumpkin Chiken Soup',
         price : 39000,
-        desc : 'Labu kuning kaya akan serat makanan sehingga dicerna secara perlahan oleh tubuh kita.',
-        img : Menu2
+        desc : 'Labu kuning kaya akan serat makanan sehingga dicerna secara perlahan oleh tubuh.',
+        img : Menu2,
+        img_prev : Prev2
     }
 ]

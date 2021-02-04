@@ -7,7 +7,7 @@ import '../assets/css/transition.css';
 import '../assets/css/tailwind.css'
 
 
-function Index() {
+const Index = () => {
     const [image, setImage] = useState(false);
     const tranFromRef =  useRef(() => {})
 

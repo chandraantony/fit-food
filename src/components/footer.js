@@ -1,7 +1,7 @@
 import React from 'react'
 import Menu from '../assets/img/salad.png'
 
-function Footer() {
+const Footer = () => {
     return(
         <div className="pt-10">
             <div className="block lg:hidden">

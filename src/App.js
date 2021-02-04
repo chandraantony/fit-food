@@ -1,15 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/navbar'
-import Index from './components/index'
 import Journey from './components/journey'
 import AboutUs from './components/aboutUs'
 import Home from './components/pages/index'
-import Footer from './components/footer'
 import TodayMenu from './components/todayMenu'
 import Testimonial from './components/testimonial'
 import NotFound from './components/pages/pageNotFound';
 import FoodOrder from './components/order';
+import OrderDetail from './components/orderDetail';
 
 
 const App =()=>{
@@ -23,6 +22,7 @@ const App =()=>{
               <Route exact path='/journey' component={Journey} />
               <Route exact path='/menu' component={TodayMenu} />
               <Route exact path='/foodOrder' component={FoodOrder} />
+              <Route exact path='/orderDetail' component={OrderDetail}></Route>
               <Route exact path='/testimonial' component={Testimonial} />   
               <Route path="*" component={NotFound}/>           
             </Switch>        

@@ -4,7 +4,7 @@ import '../assets/css/tailwind.css'
 import {Link} from 'react-router-dom'
 import Login from './modal/login'
 
-function Nav() {
+const Nav = () =>{
   const [login, setLogin ] = useState(false)
   const [smScreen, setSmScreen] = useState(true)
 
@@ -78,7 +78,7 @@ function Nav() {
           </div>
         </div>
         {/* <Login preview={login}></Login> */}
-        <div hidden={smScreen} className="lg:hidden sm:ml-6  "> 
+        <div hidden={smScreen} className="lg:hidden sm:ml-6 pt-16 "> 
           <div className="px-2 pt-2 pb-3 space-y-1 w-full fixed bg-white" >            
             <Link to="#" className="text-gray-900 hover:bg-green-50 hover:text-white block px-3 py-2 rounded-md text-sm font-medium">Dashboard</Link>
             <Link to="#" className="text-gray-900 hover:bg-green-50 hover:text-white block px-3 py-2 rounded-md text-sm font-medium">Team</Link>

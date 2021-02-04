@@ -3,7 +3,7 @@ import vegie  from '../assets/img/grocery.jpg'
 import {daharan}  from '../utils/constant'
 import '../assets/css/tailwind.css'
 
-function AboutUs(){
+const AboutUs = () => {
     return (
         <div className=" max-w-5xl pt-10 mx-auto">
             <div className="grid grid-rows pt-10 md:grid-cols-2 gap-6 px-5 py-3 ">
