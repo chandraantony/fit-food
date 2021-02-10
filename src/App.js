@@ -38,31 +38,3 @@ const App =()=>{
     </Router>
 )};
 export default App;
-
-// // import './App.css';
-// import React from 'react'
-// import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-
-// import Nav from './components/navbar'
-// import Index from './components/index'
-// import AboutUs from './components/aboutUs'
-
-// function App() {
-//   return (
-//     <div>
-//       <Nav></Nav>
-//       <Router>
-//       <Switch>
-//         <Route exact path="/"  component={Index}></Route>
-//         <Route exact path="/about"  component={AboutUs}></Route>
-//         {/* <Route exact path="/home" component={Home}></Route>
-//         <Route exact path="/login" component={Login}></Route> */}
-//         {/* <Route path="*" foo="bar"  component={() => <ErrorPage status={404} />}></Route> */}
-//       </Switch>
-//     </Router>
-//     </div>
-
-//   );
-// }
-
-// export default App;

@@ -8,6 +8,7 @@ export const isLogin = () =>{
 export  const login = (data) =>{
     const user = JSON.stringify(data)
     localStorage.setItem('user',user)
+    window.location.reload();
 }   
 
 

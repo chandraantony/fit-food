@@ -8,9 +8,11 @@ import PaymentMethod from './paymentMethod';
 import '../assets/css/tailwind.css'
 import '../assets/css/transition.css'
 import PageLoader from './loader'
+import { isLogin } from '../utils/auth'
 
 const OrderDetail = (arg) => {
     const info = arg.location.state
+    const loginStatus = isLogin()
     const back = arg.history.goBack
 
     const [status, setStatus] = useState(1)
@@ -21,10 +23,15 @@ const OrderDetail = (arg) => {
         if(status === 1){
             return setStatus(2);
         }
-        setLoading(true)
-        setTimeout(() => {
-            setPaid(true)
-        }, 2000);
+        if(loginStatus){
+            setLoading(true)
+            setTimeout(() => {
+                setPaid(true)
+            }, 2000);
+        }else{
+            return alert('Please Login First')
+        }
+
     }
     const goingBack = () => {
         if(status === 2 ){

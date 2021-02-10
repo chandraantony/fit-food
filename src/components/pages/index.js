@@ -9,8 +9,6 @@ import AboutUs from '../aboutUs'
 
 function HomePage () {
     
-    
-    // console.log(prop)
     return (
         <div>
             {/* <Nav /> */}
