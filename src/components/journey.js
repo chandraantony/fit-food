@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import FoodIcon from '../assets/icon/salad.svg'
 import BoxIcon from '../assets/icon/box.svg'
 import TrucIcon from '../assets/icon/truck.svg'
@@ -16,7 +16,7 @@ const Journey = () => {
                 <div className=" rounde grid grid-rows md:grid-cols-4 gap-12">
                     <div className="">
                         <div className="bg-yellow-200 mx-auto w-20 h-20 rounded-full">
-                            <img className="w-20 h-20 " src={FoodIcon}/>
+                            <img className="w-20 h-20 "  src={FoodIcon} alt="#" />
                         </div>  
                         <div className="text-center text-gray-800 text-md font-bold pt-8">Choose Menu</div>
                         <div className="text-center text-gray-800 text-sm">Pilih menu yang kamu suka</div>
@@ -24,7 +24,7 @@ const Journey = () => {
 
                     <div className="">
                         <div className="bg-yellow-200  mx-auto w-20 h-20 rounded-full">
-                            <img className="w-20 h-20" src={BoxIcon}/>
+                            <img className="w-20 h-20" src={BoxIcon} alt="#"/>
                         </div>  
                         <div className="text-center text-md font-bold pt-8">Packing</div>
                         <div className="text-center text-sm">Setelah pembayaran, kami packing pesananmu</div>
@@ -32,7 +32,7 @@ const Journey = () => {
 
                     <div className="">
                         <div className="bg-yellow-200  mx-auto w-20 h-20 rounded-full">
-                            <img className="w-20 h-20 mx-auto my-auto" src={TrucIcon}/>
+                            <img className="w-20 h-20 mx-auto my-auto" src={TrucIcon} alt="#"/>
                         </div>  
                         <div className="text-center text-md font-bold pt-8">Choose Menu</div>
                         <div className="text-center text-md">sdasd</div>
@@ -40,7 +40,7 @@ const Journey = () => {
 
                     <div className="">
                         <div className="bg-yellow-200  mx-auto w-20 h-20 rounded-full">
-                            <img className="w-20 h-20 mx-auto my-auto" src={smile}/>
+                            <img className="w-20 h-20 mx-auto my-auto" src={smile} alt="#" />
                         </div>  
                         <div className="text-center text-md font-bold pt-8">Choose Menu</div>
                         <div className="text-center text-md">sdasd</div>

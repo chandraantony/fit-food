@@ -13,10 +13,7 @@ const LoginForm = () => {
     const [msg, setMsg] = useState('')
     const {
         values,
-        errors,
-        touched,
         handleChange,
-        handleBlur,
         handleSubmit
     } = useCustomForm({
         initialValues,

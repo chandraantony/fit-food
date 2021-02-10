@@ -1,5 +1,5 @@
-import React, { Component, useState } from 'react'
-import { profilePic , orderHistory, orderOngoing ,orderConfirm , orderOnDelivery, orderDone , orderOnProcess} from '../../utils/data'
+import React, { useState } from 'react'
+import { profilePic , orderHistory, orderOngoing ,orderConfirm } from '../../utils/data'
 import { Transition } from '@headlessui/react'
 import {FaTruckLoading, FaTruck, FaVoteYea, FaRegSmileBeam} from 'react-icons/fa'
 import CustomTable from '../table/table'
@@ -18,7 +18,6 @@ const Profile = (props) => {
     const [label,setLabel] = useState('')
     const [data,setData] = useState('')
     const [preview,setPreview] = useState(0)
-    const myprofile = props 
 
     const testpri = (ase,data) =>{
         if(preview  === 0){

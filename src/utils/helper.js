@@ -1,6 +1,6 @@
 export const moneyFormat  = (arg) => {
     let number          = arg.toString()
-    let number_string   = number.replace(`/[^,\d]/g `, '')
+    let number_string   = number.replace(`/[^,/d]/g `, '')
     let split   		= number_string.split(',')
     let spare     		= split[0].length % 3
     let nominal     	= split[0].substr(0, spare)
@@ -11,7 +11,7 @@ export const moneyFormat  = (arg) => {
         nominal += separator + thousand.join('.');
     }
 
-    nominal = split[1] != undefined ? nominal + ',' + split[1] : nominal;
+    nominal = split[1] !== undefined ? nominal + ',' + split[1] : nominal;
     return nominal
 }
 

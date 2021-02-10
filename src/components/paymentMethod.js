@@ -1,5 +1,4 @@
 import React, { useState, forwardRef } from 'react'
-import { FaCreditCard } from 'react-icons/fa'
 import { paymentMethod } from '../utils/data'
 
 

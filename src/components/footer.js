@@ -19,7 +19,7 @@ const Footer = () => {
                             <button className="bg-gray-100 text-red-500 text-xl rounded-lg py-4 px-4 font-bold">Go to Instagram</button>
                         </div>
                         <div >
-                            <img className="object-none object-left-top w-50 h-50" src={Menu} />
+                            <img className="object-none object-left-top w-50 h-50" src={Menu} alt="#" />
                         </div>
                     </div>
                 </div>
@@ -32,9 +32,9 @@ const Footer = () => {
                                 <span className="block text-gray-400 pt-2 text-sm font-bold">Outlet</span>
                                 <span className="block text-gray-400 pt-2 text-sm font-bold">FAQ</span>
                                 <div className="pt-10">
-                                    <button className="mr-3"><img src="#" className="bg-gray-100 rounded-full w-5 h-5" /></button>
-                                    <button className="mr-3"><img src="#" className="bg-gray-100 rounded-full w-5 h-5" /></button>
-                                    <button className="mr-3"><img src="#" className="bg-gray-100 rounded-full w-5 h-5" /></button>                                                                      
+                                    <button className="mr-3"><img alt="#" src="#" className="bg-gray-100 rounded-full w-5 h-5" /></button>
+                                    <button className="mr-3"><img alt="#" src="#" className="bg-gray-100 rounded-full w-5 h-5" /></button>
+                                    <button className="mr-3"><img alt="#" src="#" className="bg-gray-100 rounded-full w-5 h-5" /></button>                                                                      
                                 </div>
                                 
                             </div>

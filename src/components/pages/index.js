@@ -11,7 +11,6 @@ function HomePage () {
     
     return (
         <div>
-            {/* <Nav /> */}
             <Index />
             <AboutUs />
             <TodayMenu/>

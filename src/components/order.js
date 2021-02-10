@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import '../assets/css/tailwind.css'
 import {Link, Redirect} from 'react-router-dom'
 
@@ -9,7 +9,7 @@ const FoodOrder = (arg) => {
 
     const [counter, setCounter] = useState(1);
     const settingCounter = (arg) =>{
-        if(arg != 'min'){
+        if(arg !== 'min'){
             setCounter(counter + 1)
         }else{
             if(counter <= 1) return;

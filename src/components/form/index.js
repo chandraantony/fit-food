@@ -7,8 +7,6 @@ const useCustomForm = ({
   const [values, setValues] = useState(initialValues || {});
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
-  const [onSubmitting, setOnSubmitting] = useState(false);
-  const [onBlur, setOnBlur] = useState(false);
 
   const formRendered = useRef(true);
 
@@ -17,8 +15,7 @@ const useCustomForm = ({
       setValues(initialValues);
       setErrors({});
       setTouched({});
-      setOnSubmitting(false);
-      setOnBlur(false);
+
     }
     formRendered.current = false;
   }, [initialValues]);

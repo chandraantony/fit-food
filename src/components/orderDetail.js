@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useState} from 'react'
 import OrderInfo from './orderInfo'
 import Summary from './orderSummary'
 import {Redirect} from 'react-router-dom'

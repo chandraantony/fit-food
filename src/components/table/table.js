@@ -1,13 +1,17 @@
-import React, { Component, useState } from 'react'
+import React, { useState,useEffect } from 'react'
 
 
 
 const CustomTable = (props) => {
     const data= props.data
     const fields = props.fields
-    const rows = props.rows
+    // const rows = props.rows
     const [page,setPage] = useState(1)
-    const totalPage = Math.floor(data.length/rows) + 1
+    // const totalPage = Math.floor(data.length/rows) + 1
+
+    useEffect(() => {
+        setPage(1)
+    }, [])
 
     return (
 

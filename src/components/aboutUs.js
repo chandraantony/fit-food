@@ -20,7 +20,7 @@ const AboutUs = () => {
                 </div>
             </div>
             <div className="pt-10 pb-10 px-5">
-                <img src={vegie} className="self-auto md:self-end rounded-lg"></img>
+                <img src={vegie} className="self-auto md:self-end rounded-lg" alt="#"></img>
             </div>  
         </div>
     )
