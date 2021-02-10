@@ -1,14 +1,14 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import { moneyFormat, RandomString } from '../utils/helper';
 import moment from 'moment'
 
 // const data = ['Name', 'Address' , 'Contact', 'Email']
 
-const OrderInfo = (arg) => {
+const OrderInfo = (arg, ref) => {
     const data = arg.data
     const hidden = arg.hidden
     return (
-        <div className="px-5 pt-10 pb-20 " hidden={!hidden}>
+        <div ref={ref} className="px-5 pt-10 pb-20 " hidden={!hidden}>
             <div className="text-gray-700 text-md md:text-md font-bold md:h-96 md:max-h-96">
                 <span className="block text-lg">Order Info</span>
                 <div className ="grid grid-cols-2 text-sm pt-3">
@@ -97,4 +97,4 @@ const OrderInfo = (arg) => {
 }
 
 
-export default OrderInfo ;
+export default forwardRef(OrderInfo) ;

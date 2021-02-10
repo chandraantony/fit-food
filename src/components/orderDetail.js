@@ -1,32 +1,47 @@
-import React, {useState} from 'react'
-import '../assets/css/tailwind.css'
+import React, {useEffect, useState} from 'react'
 import OrderInfo from './orderInfo'
 import Summary from './orderSummary'
-import { CSSTransition } from 'react-transition-group';
+import {Redirect} from 'react-router-dom'
+import {Transition} from '@headlessui/react'
 import PaymentMethod from './paymentMethod';
+
+import '../assets/css/tailwind.css'
+import '../assets/css/transition.css'
+import PageLoader from './loader'
 
 const OrderDetail = (arg) => {
     const info = arg.location.state
     const back = arg.history.goBack
 
     const [status, setStatus] = useState(1)
+    const [loading, setLoading] = useState(false)
+    const [paid ,setPaid ] = useState(false)
 
     const confirmPay = () => {
-        if(status == 1){
+        if(status === 1){
             return setStatus(2);
         }
-        return;
+        setLoading(true)
+        setTimeout(() => {
+            setPaid(true)
+        }, 2000);
     }
-
     const goingBack = () => {
-        if(status == 2 ){
+        if(status === 2 ){
            return setStatus(1);
         }
         return back();
     }
 
+    if(info  === undefined || info === null || info === ""){
+        return <Redirect  to="/"/>
+    }
+
+
     return (
         <div className="bg-yellow-100 px-3 pt-20 md:pt-14">
+            {loading ? <PageLoader /> : null }
+            {paid ? <Redirect to="/myProfile" push /> : null }
             <div className="max-w-5xl md:pt-20 mx-auto">
                 <div className="grid grid-cols-2 ">
                 <div className="text-gray-800 text-xl font-bold md:text-2xl">
@@ -38,8 +53,39 @@ const OrderDetail = (arg) => {
                 </div>
                 <div className="grid grid-rows md:grid-cols-3 gap-4 py-10 h-auto">
                     <div className="bg-white shadow rounded-lg md:col-span-2">
-                        <OrderInfo data={info} hidden={ status === 1} />
-                        <PaymentMethod hidden={status === 2}/>
+                    <Transition
+                    show={status === 1}
+                    enter="transition ease-out duration-100 transform"
+                    enterFrom="opacity-0 scale-95"
+                    enterTo="opacity-100 scale-100"
+                    tim
+                    leave="transition ease-in duration-75 transform"
+                    leaveFrom="opacity-100 scale-100"
+                    leaveTo="opacity-0 scale-95"
+                    >
+                    {(ref) => (
+                        <div ref={ref}>
+                            <OrderInfo ref={ref} data={info} hidden={ status === 1} />
+                        </div>
+                    )}
+                    </Transition>
+
+                    <Transition
+                    show={status === 2}
+                    enter="transition ease-out duration-100 transform"
+                    enterFrom="opacity-0 scale-95"
+                    enterTo="opacity-100 scale-100"
+                    tim
+                    leave="transition ease-in duration-75 transform"
+                    leaveFrom="opacity-100 scale-100"
+                    leaveTo="opacity-0 scale-95"
+                    >
+                    {(ref) => (
+                        <div ref={ref}>
+                            <PaymentMethod ref={ref} hidden={status === 2}/>
+                        </div>
+                    )}
+                    </Transition>
                     </div>
                     <div>
                         <div className="rounded-lg bg-white shadow">

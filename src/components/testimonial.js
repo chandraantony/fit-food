@@ -3,7 +3,7 @@ import { comments }from '../utils/data'
 
 function Testimonial() {
     return(
-        <div className="bg-gray-100 py-10">
+        <div id="testi" name="testi" className="bg-gray-100 py-10">
             <div className="max-w-5xl mx-auto">
                 <div className="py-10">
                     <span className="block text-gray-900 text-4xl text-bold text-center md:text-5xl font-bold sm:text-3xl">Testimonial</span>

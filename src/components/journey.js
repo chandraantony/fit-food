@@ -7,7 +7,7 @@ import smile from '../assets/icon/smile.svg'
 
 const Journey = () => {
     return(
-        <div className=" max-w-5xl mx-auto pt-10 pb-20">
+        <div id="instruct" name="instruct" className=" max-w-5xl mx-auto pt-10 pb-20">
             <div className="py-10">
                 <span className="block text-gray-900 text-4xl text-bold text-center md:text-5xl font-bold sm:text-3xl">Order Stages</span>
                 <span className="block py-5 text-center text-gray-700 font-semibold  ">Pilh menu yang kau suka dan kami antarkan ke lokasi kamu</span>

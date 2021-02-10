@@ -6,7 +6,7 @@ import '../assets/css/tailwind.css'
 
 function TodayMenu(){
     return (
-        <div className="max-w-4xl mx-auto py-10">
+        <div id="menu" name="menu" className="max-w-4xl mx-auto py-10">
             <div className="py-10">
                 <span className="block text-gray-900 text-4xl text-bold text-center md:text-5xl font-bold sm:text-3xl">Our Menu Today</span>
                 <span className="block py-5 text-center text-gray-700 font-semibold  ">Pilih menu hari ini yang kamu suka</span>

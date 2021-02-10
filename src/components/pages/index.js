@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Index from '../index'
 import Footer from '../footer'
 import Journey from '../journey'
@@ -6,14 +6,19 @@ import Testimonial from '../testimonial'
 import TodayMenu from '../todayMenu'
 import AboutUs from '../aboutUs'
 
+
 function HomePage () {
+    
+    
+    // console.log(prop)
     return (
         <div>
-            <Index id="/index"/>
-            <AboutUs id="/about"/>
-            <TodayMenu id="/menu"/>
-            <Journey id="/journey"/>
-            <Testimonial id="/testimoni"/>
+            {/* <Nav /> */}
+            <Index />
+            <AboutUs />
+            <TodayMenu/>
+            <Journey />
+            <Testimonial />
             <Footer/>
         </div>
     ) 

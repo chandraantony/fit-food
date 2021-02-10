@@ -1,22 +1,18 @@
 
 import grocery from '../assets/img/mainmenu.png'
-import React, { useState,useEffect, useRef } from 'react'
-import { CSSTransition } from 'react-transition-group';
+import React, { useState,useEffect } from 'react'
+import { Transition } from '@headlessui/react'
 
 import '../assets/css/transition.css';
 import '../assets/css/tailwind.css'
+import { Link } from 'react-scroll';
 
 
 const Index = () => {
     const [image, setImage] = useState(false);
-    const tranFromRef =  useRef(() => {})
-
-    tranFromRef.current = () => {
-        setImage(true)
-    }
 
     useEffect(() => {    
-        tranFromRef.current()
+        setImage(true)
     }, [])
 
 
@@ -39,18 +35,30 @@ const Index = () => {
             </p>
             </div>
             <div className="py-3 px-3 items-center text-center">
-                <button className="bg-green-50 lg:text-lg md:text-auto text-white px-5 py-3  rounded-md font-bold">Lihat Menu</button>
+                <Link
+                type="button"
+                to="menu"
+                spy={true}
+                smooth={true}
+                duration={500} 
+                className=" bg-green-50 lg:text-lg md:text-auto text-white px-5 py-3  rounded-md font-bold cursor-pointer"
+                >Lihat Menu</Link>
             </div> 
-            <CSSTransition
-                    in={image}
-                    timeout={500}
-                    classNames="transition"
-                    unmountOnExit
-            >
-            <div className="flex justify-center mt-10 md:mt-10 sm:mt-10">
-                <img src={grocery} className="self-auto md:self-end max-h-80 " alt=""></img>
-            </div>
-            </CSSTransition>
+                <Transition
+                show={image}
+                enter="transition ease-out duration-500 transform"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="transition ease-in duration-75 transform"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+                >
+                {(ref) => (
+                    <div ref={ref} className="flex justify-center mt-10 md:mt-10 sm:mt-10">
+                        <img src={grocery} className="self-auto md:self-end max-h-80 " alt=""></img>
+                    </div>
+                )}
+                </Transition>
             
         </div>
         </div>

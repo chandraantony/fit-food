@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import '../assets/css/tailwind.css'
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 
 
 
 const FoodOrder = (arg) => {
     const menuTest = arg.location.state
+
     const [counter, setCounter] = useState(1);
     const settingCounter = (arg) =>{
         if(arg != 'min'){
@@ -14,6 +15,10 @@ const FoodOrder = (arg) => {
             if(counter <= 1) return;
             setCounter(counter -1)
         }
+    }
+
+    if(menuTest  === undefined || menuTest === null || menuTest === ""){
+        return <Redirect  to="/"/>
     }
 
     return (
