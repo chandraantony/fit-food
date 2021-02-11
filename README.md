@@ -4,7 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Deployed Project
 
-https://cocky-joliot-5276ed.netlify.app/
+email : test@test
+password : password
+Open [https://cocky-joliot-5276ed.netlify.app/](https://cocky-joliot-5276ed.netlify.app/) 
+
 
 ## Available Scripts
 
