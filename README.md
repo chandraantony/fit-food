@@ -4,8 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Deployed Project
 
-email : test@test
-password : password
+email : test@test \
+password : password \
 Open [https://cocky-joliot-5276ed.netlify.app/](https://cocky-joliot-5276ed.netlify.app/) 
 
 
